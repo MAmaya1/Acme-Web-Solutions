@@ -1,4 +1,4 @@
-ACME WEB DESIGN
+ACME WEB DESIGN (template, proof of concept)
 ===
 
 Project source can be downloaded from https://github.com/thefozcat/Acme-Web-Design.git
