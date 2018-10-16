@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+/* Global */
+
+html {
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+    color: rgba(0, 0, 0, 0.9);
+}
+
+body {
+    line-height: 1.4;
+    margin: 0;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+        "home-hero home-hero home-hero home-hero"
+        "services services services services"
+        "portfolio portfolio portfolio portfolio"
+        "invite invite invite invite"
+        "connect connect connect connect"
+        "footer footer footer footer";
+}
+
+.section-head {
+    text-align: center;
+    margin-top: 5vh;
+    padding: 1em;
+    font-size: 3rem;
+}
+
+/* Header */
+
+header {
+    background: rgb(0, 0, 0);
+    height: 7vh;
+    width: 100vw;
+    position: fixed;
+}
+
+header .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 80vw;
+    margin: auto;
+}
+
+header #branding {
+    font-size: .7rem;
+}
+
+header span {
+    color: rgb(255, 69, 0);
+}
+
+header a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: .2em;
+    transition: background 500ms ease;
+}
+
+header a:hover {
+    color: rgb(128, 128, 128);
+}
+
+/* Navigation */
+
+.main-nav ul {
+    display: grid;
+    grid-gap: 10px;
+    margin: 1.4em;
+    padding: 0;
+    list-style: none;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* Home Hero */
+
+#home-hero {
+    grid-area: home-hero;
+    background: url(img/showcase.jpg) no-repeat;
+    background-size: cover;
+    height: 95vh;
+    margin-top: 5vh;
+}
+
+#home-hero .showcase {
+    color: rgb(0, 0, 0);
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 35vh;
+}
+
+/* What We Do */
+
+#services {
+    grid-area: services;
+    height: 100vh;
+    background: rgb(255, 255, 255);
+}
+
+#services .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1.4em;
+    width: 75vw;
+    margin: auto;
+    padding: 1.5em;
+}
+
+.box {
+    text-align: center;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+    
+}
+
+#services .blurb {
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 2em;
+    font-weight: 200;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+/* See Our Work */
+
+#portfolio {
+    grid-area: portfolio;
+    height: 100vh;
+    background: rgb(211, 211, 211);
+}
+
+#portfolio .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 1.4em;
+    width: 80vw;
+    margin: auto;
+}
+
+#portfolio img {
+   width: 70%;
+    box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
+/* Get Started */
+
+#invite {
+    grid-area: invite;
+    height: 95vh;
+    background: rgb(255, 255, 255);
+}
+
+#invite .grid {
+    display: flex;
+    justify-content: space-around;
+    width: 80vw;
+    margin: auto;
+}
+
+.price-box {
+    text-align: center;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+    width: 30vw;
+    height: 50vh;
+}
+
+.price-box h4 {
+    font-size: 2.5rem;
+}
+
+.price-box .price {
+    font-size: 3.5rem;
+    
+}
+
+.price-box .btn {
+    background: rgb(51, 51, 51);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 1em;
+    transition: background 200ms ease;
+}
+
+.price-box a:hover {
+    background: rgb(211, 211, 211);
+    color: rgb(0, 0, 0);
+}
+
+
+/* Connect */
+
+#connect {
+    grid-area: connect;
+    background: rgb(211, 211, 211);
+    height: 95vh;
+}
+
+#connect .grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    height: 65vh;
+    width: 75vw;
+    margin: auto;
+    margin-top: -3em;
+    box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+    background: white;
+}
+
+#connect .company-info {
+    text-align: left;
+    background: rgb(238, 237, 237);
+    font-size: 1.4em;
+    padding: 1.5em;
+}
+
+#connect .company-info span {
+    color: rgb(255, 69, 0);
+}
+
+#connect .company-info ul {
+    list-style: none;  
+    padding: 0;
+}
+
+#connect .contact {
+    padding: 2em;
+}
+
+.contact form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+}
+
+.contact h4 {
+    font-size: 1rem;
+}
+
+.contact form label {
+    display: block;
+}
+
+.contact form input {
+    width: 90%;
+    padding: 1em;
+}
+
+.contact form textarea {
+    width: 200%;
+}
+
+.contact button {
+    border: none;
+    padding: 1em;
+    font-size: 1.2rem;
+    text-decoration: none;
+    width: 100%;
+    background: rgb(51, 51, 51);
+    color: rgb(255, 255, 255);
+    margin: auto;
+    transition: background 500ms ease;
+}
+
+.contact button:hover {
+    background: rgb(211, 211, 211);
+    color: rgb(0, 0, 0);
+}
+
+/* Footer */
+
+footer {
+    grid-area: footer;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background: rgb(0, 0, 0);
+    margin-bottom: 0;
+}
