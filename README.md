@@ -1,4 +1,4 @@
-ACME WEB REDESIGN (template, proof of concept)
+ACME WEB SOLUTIONS (template, proof of concept)
 ===
 
 Project source can be downloaded from https://github.com/thefozcat/Acme-Web-Solutions.git
