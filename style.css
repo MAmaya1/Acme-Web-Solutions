@@ -303,7 +303,7 @@ footer {
 @media screen and (max-width: 1024px) {
 
     .main-nav li {
-        padding: 0 1rem;
+        padding: 0 2rem 0 1.5rem;
     }
 
     #services {
