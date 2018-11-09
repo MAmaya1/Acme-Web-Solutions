@@ -27,8 +27,7 @@ body {
 
 .section-head {
     text-align: center;
-    margin-top: 5vh;
-    padding: 1em;
+    padding-top: 5vh;
     font-size: 3rem;
 }
 
@@ -36,20 +35,16 @@ body {
 
 header {
     background: rgb(0, 0, 0);
-    height: 7vh;
+    height: 60px;
     width: 100vw;
     position: fixed;
 }
 
-header .grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    width: 80vw;
-    margin: auto;
-}
-
-header #branding {
-    font-size: .7rem;
+header h1 {
+    font-size: 1.5rem;
+    float: left;
+    line-height: 30px;
+    margin-left: 2.5rem;
 }
 
 header span {
@@ -60,22 +55,24 @@ header a {
     text-decoration: none;
     color: rgb(255, 255, 255);
     padding: .2em;
-    transition: background 500ms ease;
 }
 
 header a:hover {
     color: rgb(128, 128, 128);
+    transition: 500ms ease;
 }
 
 /* Navigation */
 
-.main-nav ul {
-    display: grid;
-    grid-gap: 10px;
-    margin: 1.4em;
-    padding: 0;
+.main-nav {
+    float: right;
+    line-height: 30px;
+}
+
+.main-nav li {
+    padding: 0 4rem 0 2rem;
     list-style: none;
-    grid-template-columns: repeat(4, 1fr);
+    display: inline-block;
 }
 
 /* Home Hero */
@@ -84,8 +81,7 @@ header a:hover {
     grid-area: home-hero;
     background: url(img/showcase.jpg) no-repeat;
     background-size: cover;
-    height: 95vh;
-    margin-top: 5vh;
+    height: 100vh;
 }
 
 #home-hero .showcase {
@@ -93,7 +89,7 @@ header a:hover {
     font-size: 2rem;
     font-weight: bold;
     text-align: center;
-    margin: 35vh;
+    margin: 35vh 5vw;
 }
 
 /* What We Do */
@@ -102,6 +98,7 @@ header a:hover {
     grid-area: services;
     height: 100vh;
     background: rgb(255, 255, 255);
+    padding-bottom: 5em;
 }
 
 #services .grid {
@@ -122,7 +119,7 @@ header a:hover {
 
 #services .blurb {
     text-align: center;
-    font-size: 3rem;
+    font-size: 2rem;
     margin-top: 2em;
     font-weight: 200;
     color: rgba(0, 0, 0, 0.5);
@@ -146,22 +143,28 @@ header a:hover {
 }
 
 #portfolio img {
-   width: 70%;
-    box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+   width: 100%;
+   box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
+#portfolio .caption {
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
 }
 
 /* Get Started */
 
 #invite {
     grid-area: invite;
-    height: 95vh;
+    height: 100vh;
     background: rgb(255, 255, 255);
 }
 
 #invite .grid {
-    display: flex;
-    justify-content: space-around;
-    width: 80vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 70vw;
     margin: auto;
 }
 
@@ -179,7 +182,6 @@ header a:hover {
 
 .price-box .price {
     font-size: 3.5rem;
-    
 }
 
 .price-box .btn {
@@ -202,16 +204,14 @@ header a:hover {
 #connect {
     grid-area: connect;
     background: rgb(211, 211, 211);
-    height: 95vh;
+    min-height: calc(100vh - 50px);
 }
 
 #connect .grid {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    height: 65vh;
-    width: 75vw;
+    width: 80vw;
     margin: auto;
-    margin-top: -3em;
     box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
     background: white;
 }
@@ -238,25 +238,35 @@ header a:hover {
 
 .contact form {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 1em;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 4em;
 }
-
-.contact h4 {
-    font-size: 1rem;
-}
-
+  
 .contact form label {
     display: block;
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+}
+
+.contact form p {
+    margin: 0;
+}
+
+.contact form .message,
+.submit {
+    grid-column: 1 / 3;
 }
 
 .contact form input {
     width: 90%;
     padding: 1em;
+    border: 1px solid rgb(0, 0, 0);
 }
 
 .contact form textarea {
-    width: 200%;
+    width: 95%;
+    padding: 1em;
+    border: 1px solid rgb(0, 0, 0);
 }
 
 .contact button {
@@ -281,7 +291,149 @@ header a:hover {
 footer {
     grid-area: footer;
     text-align: center;
+    height: 50px;
     color: rgb(255, 255, 255);
     background: rgb(0, 0, 0);
     margin-bottom: 0;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 1024px) {
+
+    .main-nav li {
+        padding: 0 1.5rem;
+    }
+
+    #services {
+        height: auto;
+    }
+
+    #services .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #portfolio {
+        height: auto;
+        padding-bottom: 6em;
+    }
+
+    #portfolio .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #portfolio .caption {
+        display: none;
+    }
+
+    #invite {
+        height: auto;
+        padding-bottom: 6em;
+    }
+
+    #invite .grid {
+        grid-template-columns: 1fr;
+        grid-gap: 30px;
+    }
+
+    .price-box {
+       width: 65vw;
+       height: 25em;
+       margin: auto;
+       padding: 1rem 0.5rem;
+    }
+
+    #connect {
+        height: auto;
+        padding-bottom: 2em;
+    }
+
+    #connect .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact form {
+        display: block;
+    }
+
+    .contact form input,
+    .contact form textarea {
+        width: 95%;
+        padding: 1em;
+        border: 1px solid rgb(0, 0, 0);
+    }
+
+    .contact form p {
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    #services .blurb {
+        font-size: 1.5rem;
+    }
+
+    .price-box {
+        height: 20em;
+    }
+
+    .price-box h4 {
+        font-size: 2rem;
+    }
+    
+    .price-box .price {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    
+    header h1 {
+        font-size: 1.2rem;
+        line-height: 35px;
+        margin-left: 1rem;
+    }
+
+    #home-hero .showcase {
+        font-size: 1.5rem;
+    }
+
+    .section-head {
+        font-size: 1.8rem;
+    }
+
+    #services .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .price-box h4 {
+        font-size: 1.5rem;
+    }
+    
+    .price-box .price {
+        font-size: 2rem;
+    }
+
+    #portfolio .grid {
+        grid-template-columns: 1fr;
+    }
+
+    #connect .company-info {
+        padding: 0.8em;
+    }
+
+    #connect .contact {
+        padding: 1em;
+    }
+
+    .contact form input,
+    .contact form textarea {
+        width: 87%;
+    }
+
+    footer p {
+        font-size: 0.7rem;
+        line-height: 30px;
+    }
 }
