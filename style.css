@@ -54,7 +54,7 @@ header span {
 header a {
     text-decoration: none;
     color: rgb(255, 255, 255);
-    padding: .2em;
+    padding: 0.2em;
 }
 
 header a:hover {
@@ -66,7 +66,7 @@ header a:hover {
 
 .main-nav {
     float: right;
-    line-height: 30px;
+    line-height: 35px;
 }
 
 .main-nav li {
@@ -96,7 +96,7 @@ header a:hover {
 
 #services {
     grid-area: services;
-    height: 100vh;
+    height: 95vh;
     background: rgb(255, 255, 255);
     padding-bottom: 5em;
 }
@@ -121,6 +121,7 @@ header a:hover {
     text-align: center;
     font-size: 2rem;
     margin-top: 2em;
+    padding: 0 2em;
     font-weight: 200;
     color: rgba(0, 0, 0, 0.5);
 }
@@ -302,7 +303,7 @@ footer {
 @media screen and (max-width: 1024px) {
 
     .main-nav li {
-        padding: 0 1.5rem;
+        padding: 0 1rem;
     }
 
     #services {
@@ -369,6 +370,10 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
+
+    .menu {
+        display: none;
+    }
 
     #services .blurb {
         font-size: 1.5rem;
